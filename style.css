@@ -1,0 +1,12 @@
+#mini-pomodoro-tomato {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 2147483647;
+    font-family: 'Press Start 2P', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+    image-rendering: pixelated;
+}
