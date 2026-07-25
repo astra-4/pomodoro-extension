@@ -4,9 +4,6 @@
     right: 18px;
     z-index: 2147483647;
     font-family: 'Press Start 2P', monospace;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     user-select: none;
     image-rendering: pixelated;
 }
@@ -33,7 +30,9 @@
 }
 
 #mini-pomodoro-tomato .tomato-panel {
-    margin-bottom: 10px;
+    position: absolute;
+    bottom: 64px;
+    right: 0;
     background: #d9d9c8;
     border: 4px solid #1a1a1a;
     box-shadow: 6px 6px 0 #1a1a1a;

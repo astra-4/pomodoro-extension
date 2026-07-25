@@ -202,35 +202,50 @@
         finishTimer();
     })
 
-    tomatoButton.addEventListener("click", function() {
-        panel.classList.toggle("open");
-    });
-
     var isDragging = false;
-    var dragOffsetX = 0;
-    var dragOffsetY = 0;
+    var hasDragged = false;
+    var dragStartX = 0;
+    var dragStartY = 0;
+    var wrapperStartLeft = 0;
+    var wrapperStartTop = 0;
 
     tomatoButton.addEventListener("mousedown", function (event) {
         isDragging = true;
+        hasDragged = false;
         var rect = wrapper.getBoundingClientRect();
-        dragOffsetX = event.clientX - rect.left;
-        dragOffsetY = event.clientY - rect.top;
         wrapper.style.left = rect.left + "px";
         wrapper.style.top = rect.top + "px";
         wrapper.style.right = "auto";
         wrapper.style.bottom = "auto";
+        dragStartX = event.clientX;
+        dragStartY = event.clientY;
+        wrapperStartLeft = rect.left;
+        wrapperStartTop = rect.top;
+        event.preventDefault();
     });
 
     document.addEventListener("mousemove", function (event) {
         if (!isDragging) {
             return;
         }
-        wrapper.style.left = (event.clientX - dragOffsetX) + "px";
-        wrapper.style.top = (event.clientY - dragOffsetY) + "px";
+        var deltaX = event.clientX - dragStartX;
+        var deltaY = event.clientY - dragStartY;
+        if (Math.abs(deltaX) > 3 || Math.abs(deltaY) > 3) {
+            hasDragged = true;
+        }
+        wrapper.style.left = (wrapperStartLeft + deltaX) + "px";
+        wrapper.style.top = (wrapperStartTop + deltaY) +  "px";
     });
 
     document.addEventListener("mouseup", function() {
         isDragging = false;
+    });
+
+    tomatoButton.addEventListener("click", function() {
+        if (hasDragged) {
+            return;
+        }
+        panel.classList.toggle("open");
     });
 
     updateDisplay();
