@@ -1,0 +1,14 @@
+{
+    "manifest_version": 3,
+    "name": "Mini Pomodoro Tomato",
+    "version"  : "1.0",
+    "description": "Adds a mini pomodoro timer tomato to every page!",
+    "permissions": [],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"],
+            "run_at": "document_idle"
+        }
+    ]
+}
