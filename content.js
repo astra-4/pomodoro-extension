@@ -40,6 +40,9 @@
     var labelDisplay = document.createElement("div");
     labelDisplay.className = "tomato-label";
 
+    var timeDisplay = document.createElement("div");
+    timeDisplay.className = "tomato-time";
+
     var timeline = document.createElement("div");
     timeline.className = "tomato-timeline";
 
@@ -58,17 +61,17 @@
     });
 
     var controls = document.createElement("div");
-    controls.classname = "tomato-controls";
+    controls.className = "tomato-controls";
 
     var startPauseButton = document.createElement("button");
-    startPauseButton.classname = "tomato-action";
+    startPauseButton.className = "tomato-action";
 
     var finishButton = document.createElement("button");
-    finishButton.classname = "tomato-action finish";
+    finishButton.className = "tomato-action finish";
     finishButton.textContent = "Finish";
 
     var resetButton = document.createElement("button");
-    resetButton.classname = "tomato-action reset";
+    resetButton.className = "tomato-action reset";
     resetButton.textContent = "Reset";
 
     controls.appendChild(startPauseButton);
@@ -80,7 +83,7 @@
     panel.appendChild(timeline);
     panel.appendChild(controls);
 
-    var tomato = document.createElement("div");
+    var tomatoButton = document.createElement("div");
     tomatoButton.className = "tomato-button";
     if (LOGO_IMAGE) {
         var tomatoImage = document.createElement("img");
