@@ -26,57 +26,96 @@
 }
 
 #mini-pomodoro-tomato .tomato-button img {
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    image-rendering: pixelated;
 }
 
 #mini-pomodoro-tomato .tomato-panel {
-
+    margin-bottom: 10px;
+    background: #d9d9c8;
+    border: 4px solid #1a1a1a;
+    box-shadow: 6px 6px 0 #1a1a1a;
+    padding: 14px;
+    width: 190px;
+    text-align: center;
+    display: none;
 }
 
 #mini-pomodoro-tomato .tomato-panel.open {
-
+    display: block;
 }
 
 #mini-pomodoro-tomato .tomato-time {
-
+    font-size: 22px;
+    color: #1a1a1a;
+    margin-bottom: 6px;
 }
 
 #mini-pomodoro-tomato .tomato-label {
-
+    font-size: 9px;
+    color: #4a4a3a;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
 #mini-pomodoro-tomato .tomato-timeline {
-
+    display: flex;
+    gap: 3px;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 #mini-pomodoro-tomato .tomato-segment {
-
+    width: 16px;
+    height: 10px;
+    border: 2px solid #1a1a1a;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
 }
 
 #mini-pomodoro-tomato .tomato-segment-fill {
-
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: #2f7d32;
 }
 
 #mini-pomodoro-tomato .tomato-segment.is-break .tomato-segment-fill {
-
+    background: #3a6ea5;
 }
 
 #mini-pomodoro-tomato .tomato-controls {
-
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-botom: 10px;
 }
 
 #mini-pomodoro-tomato button.tomato-action {
-
+    border: 3px solid #1a1a1a;
+    background-color: #2f7d32;
+    color: #ffffff;
+    padding: 6px 8px;
+    font-family: 'Press Start 2P', monospace;
+    font-size: 8px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 #1a1a1a;
 }
 
 #mini-pomodoro-tomato button.tomato-action:active {
-
+    box-shadow: none;
+    transform: translate(3px, 3px);
 }
 
 #mini-pomodoro-tomato button.tomato-action.reset {
-
+    background: #8a8a7a;
 }
 
 #mini-pomodoro-tomato button.tomato-action.finish {
-
+    background: #b5451e;
 }
