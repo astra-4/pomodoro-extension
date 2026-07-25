@@ -1,7 +1,7 @@
 #mini-pomodoro-tomato {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 18px;
+    right: 18px;
     z-index: 2147483647;
     font-family: 'Press Start 2P', monospace;
     display: flex;
@@ -9,4 +9,74 @@
     align-items: center;
     user-select: none;
     image-rendering: pixelated;
+}
+
+#mini-pomodoro-tomato .tomato-button {
+    width: 56px;
+    height: 56px;
+    background: #e64533;
+    border: 4px solid #1a1a1a;
+    box-shadow: 4px 4px 0 #1a1a1a;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    overflow: hidden;
+}
+
+#mini-pomodoro-tomato .tomato-button img {
+
+}
+
+#mini-pomodoro-tomato .tomato-panel {
+
+}
+
+#mini-pomodoro-tomato .tomato-panel.open {
+
+}
+
+#mini-pomodoro-tomato .tomato-time {
+
+}
+
+#mini-pomodoro-tomato .tomato-label {
+
+}
+
+#mini-pomodoro-tomato .tomato-timeline {
+
+}
+
+#mini-pomodoro-tomato .tomato-segment {
+
+}
+
+#mini-pomodoro-tomato .tomato-segment-fill {
+
+}
+
+#mini-pomodoro-tomato .tomato-segment.is-break .tomato-segment-fill {
+
+}
+
+#mini-pomodoro-tomato .tomato-controls {
+
+}
+
+#mini-pomodoro-tomato button.tomato-action {
+
+}
+
+#mini-pomodoro-tomato button.tomato-action:active {
+
+}
+
+#mini-pomodoro-tomato button.tomato-action.reset {
+
+}
+
+#mini-pomodoro-tomato button.tomato-action.finish {
+
 }
