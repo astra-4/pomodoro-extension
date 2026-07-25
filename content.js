@@ -14,7 +14,7 @@
         {type: "break", minutes:15}
     ];
 
-    var LOGO_IMAGE = "https://ibb.co/5W8jPJpt";
+    var LOGO_IMAGE = "https://i.ibb.co/1fqXk4yh/tomato.png";
 
     var phaseIndex = 0;
     var secondsLeft = PHASES[phaseIndex].minutes * 60;
@@ -162,7 +162,7 @@
 
     function showEasterEgg() {
         var egg = document.createElement("img");
-        egg.src = "https://tenor.com/t5PGB8YJaQM.gif"
+        egg.src = "https://media1.tenor.com/m/6COMq6z3l5oAAAAd/bosnov-67.gif"
         egg.className = "tomato-egg";
         document.body.appendChild(egg);
         setTimeout(function() {
