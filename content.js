@@ -206,6 +206,33 @@
         panel.classList.toggle("open");
     });
 
+    var isDragging = false;
+    var dragOffsetX = 0;
+    var dragOffsetY = 0;
+
+    tomatoButton.addEventListener("mousedown", function (event) {
+        isDragging = true;
+        var rect = wrapper.getBoundingClientRect();
+        dragOffsetX = event.clientX - rect.left;
+        dragOffsetY = event.clientY - rect.top;
+        wrapper.style.left = rect.left + "px";
+        wrapper.style.top = rect.top + "px";
+        wrapper.style.right = "auto";
+        wrapper.style.bottom = "auto";
+    });
+
+    document.addEventListener("mousemove", function (event) {
+        if (!isDragging) {
+            return;
+        }
+        wrapper.style.left = (event.clientX - dragOffsetX) + "px";
+        wrapper.style.top = (event.clientY - dragOffsetY) + "px";
+    });
+
+    document.addEventListener("mouseup", function() {
+        isDragging = false;
+    });
+
     updateDisplay();
 
     document.body.appendChild(wrapper);

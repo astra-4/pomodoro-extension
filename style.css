@@ -14,7 +14,7 @@
 #mini-pomodoro-tomato .tomato-button {
     width: 56px;
     height: 56px;
-    background: #e64533;
+    background: #f07365;
     border: 4px solid #1a1a1a;
     box-shadow: 4px 4px 0 #1a1a1a;
     cursor: pointer;
@@ -129,4 +129,8 @@
     border: 4px solid #1a1a1a;
     box-shadow: 4px 4px 0 #1a1a1a;
     image-rendering: pixelated;
+}
+
+#mini-pomodoro-tomato .tomato-button {
+    cursor: grab;
 }
