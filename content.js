@@ -100,7 +100,7 @@
         var minutes = Math.floor(seconds/60);
         var secs = seconds % 60;
         var minunteText = minutes < 10 ? "0" + minutes : "" + minutes;
-        var secText = secs < 10 ? "0" + secs : "" + minutes;
+        var secText = secs < 10 ? "0" + secs : "" + secs;
         return minunteText + ":" + secText;
     }
 
