@@ -119,3 +119,14 @@
 #mini-pomodoro-tomato button.tomato-action.finish {
     background: #b5451e;
 }
+
+.tomato-egg {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 2147483647;
+    width: 120px;
+    border: 4px solid #1a1a1a;
+    box-shadow: 4px 4px 0 #1a1a1a;
+    image-rendering: pixelated;
+}

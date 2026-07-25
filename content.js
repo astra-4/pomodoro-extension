@@ -151,6 +151,20 @@
         isRunning = false;
         clearInterval(timerId);
         updateDisplay();
+        var elapseSeconds = (PHASES[phaseIndex].minutes * 60)-secondsLeft;
+        if (elapseSeconds >= 360 && elapseSeconds <=420) {
+            showEasterEgg();
+        }
+    }
+
+    function showEasterEgg() {
+        var egg = document.createElement("img");
+        egg.src = "https://tenor.com/t5PGB8YJaQM.gif"
+        egg.className = "tomato-egg";
+        document.body.appendChild(egg);
+        setTimeout(function() {
+            egg.remove();
+        }, 3000);
     }
 
     function resetTimer() {
