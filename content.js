@@ -83,6 +83,10 @@
     panel.appendChild(timeline);
     panel.appendChild(controls);
 
+    var resizeHandle = document.createElement("div");
+    resizeHandle.className = "tomato-resize-handle";
+    panel.appendChild(resizeHandle);
+
     var tomatoButton = document.createElement("div");
     tomatoButton.className = "tomato-button";
     if (LOGO_IMAGE) {
@@ -246,6 +250,47 @@
             return;
         }
         panel.classList.toggle("open");
+    });
+
+    //resizer
+    var isResizing = false;
+    var resizeStartX = 0;
+    var resizeStartY = 0;
+    var resizeStartWidth = 0;
+    var resizeStartHeight = 0;
+
+    resizeHandle.addEventListener("mousedown", function (event) {
+        isResizing = true;
+        var rect = panel.getBoundingClientRect();
+        resizeStartX = event.clientX;
+        resizeStartY = event.clientY;
+        resizeStartWidth = rect.width;
+        resizeStartHeight = rect.height;
+        panel.style.height = rect.height + "px";
+        event.preventDefault();
+        event.stopPropagation();
+    });
+
+    document.addEventListener("mousemove", function (event) {
+        if (!isResizing) {
+            return;
+        }
+        var deltaX = resizeStartX - event.clientX;
+        var deltay = resizeStartY - event.clientY;
+        var newWidth = resizeStartWidth + deltaX;
+        var newHeight = resizeStartHeight + deltaY;
+        if (newWidth < 140) {
+            newWidth = 140;
+        }
+        if (newHeight< 100) {
+            newHeight = 100;
+        }
+        panel.style.width = newWidth + "px";
+        panel.style.height = newHeight + "px";
+    });
+
+    document.addEventListener("mouseup", function() {
+        isResizing = false;
     });
 
     updateDisplay();

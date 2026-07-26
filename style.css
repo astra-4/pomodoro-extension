@@ -38,12 +38,24 @@
     box-shadow: 6px 6px 0 #1a1a1a;
     padding: 14px;
     width: 190px;
+    box-sizing: border-box;
+    overflow: auto;
     text-align: center;
     display: none;
 }
 
 #mini-pomodoro-tomato .tomato-panel.open {
     display: block;
+}
+
+#mini-pomodoro-tomato .tomato-resize-handle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    cursor: nwse-resize;
+    background: #1a1a1a;
 }
 
 #mini-pomodoro-tomato .tomato-time {
