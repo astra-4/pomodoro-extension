@@ -14,7 +14,7 @@
         {type: "break", minutes:15}
     ];
 
-    var LOGO_IMAGE = "https://i.ibb.co/1fqXk4yh/tomato.png";
+    var LOGO_IMAGE = "https://ibb.co/VcSStgBB";
 
     var BASE_PANEL_WIDTH = 190;
     var BASE_PANEL_FONT_SIZE = 10;
