@@ -276,7 +276,7 @@
             return;
         }
         var deltaX = resizeStartX - event.clientX;
-        var deltay = resizeStartY - event.clientY;
+        var deltaY = resizeStartY - event.clientY;
         var newWidth = resizeStartWidth + deltaX;
         var newHeight = resizeStartHeight + deltaY;
         if (newWidth < 140) {
