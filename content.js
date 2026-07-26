@@ -161,8 +161,7 @@
         isRunning = false;
         clearInterval(timerId);
         updateDisplay();
-        var elapseSeconds = (PHASES[phaseIndex].minutes * 60)-secondsLeft;
-        if (elapseSeconds >= 360 && elapseSeconds <=420) {
+        if (secondsLeft >=360 && secondsLeft <= 419) {
             showEasterEgg();
         }
     }
@@ -298,6 +297,7 @@
     });
 
     updateDisplay();
+    
 
     document.body.appendChild(wrapper);
 }) ();
