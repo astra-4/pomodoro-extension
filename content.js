@@ -16,6 +16,9 @@
 
     var LOGO_IMAGE = "https://i.ibb.co/1fqXk4yh/tomato.png";
 
+    var BASE_PANEL_WIDTH = 190;
+    var BASE_PANEL_FONT_SIZE = 10;
+
     var phaseIndex = 0;
     var secondsLeft = PHASES[phaseIndex].minutes * 60;
     var isRunning = false;
@@ -287,6 +290,7 @@
         }
         panel.style.width = newWidth + "px";
         panel.style.height = newHeight + "px";
+        panel.style.fontSize = (BASE_PANEL_FONT_SIZE * (newWidth/BASE_PANEL_WIDTH)) + "px";
     });
 
     document.addEventListener("mouseup", function() {
