@@ -14,7 +14,7 @@
         {type: "break", minutes:15}
     ];
 
-    var LOGO_IMAGE = "https://ibb.co/VcSStgBB";
+    var LOGO_IMAGE = "https://i.ibb.co/B5ZZtyss/Screenshot-2026-07-25-at-17-19-17-removebg-preview.png";
 
     var BASE_PANEL_WIDTH = 190;
     var BASE_PANEL_FONT_SIZE = 10;
